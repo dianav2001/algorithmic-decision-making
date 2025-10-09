@@ -82,7 +82,9 @@ def select_features_to_use():
     of features used for training to see the effects on the model's performance.
     """
     # Start with an empty set of features and add the ones to use in the model below
-    features_to_use = []
+    features_to_use = ['Number_of_Priors', 'Charge_Degree_F', 'Charge_Degree_M', 
+                   'Charge_Description_x', 'Charge_Description_y']  
+
 
     # Input features based on number of prior juvenile felony convictions (bucketed into 4 categories)
     features_to_use.append(constants.JUVENILE_FELONY_COUNT_0)
