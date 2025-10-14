@@ -70,6 +70,16 @@ def main():
     print("Testing set results for " + constants.feature_names[feature_index])
     print_results(pm, testing_set, feature_index)
 
+    print()
+    feature_index = constants.RACE_CAUCASIAN
+    print("Testing set results for " + constants.feature_names[feature_index])
+    print_results(pm, testing_set, feature_index)
+
+    print()
+    feature_index = constants.RACE_AFRICAN_AMERICAN
+    print("Testing set results for " + constants.feature_names[feature_index])
+    print_results(pm, testing_set, feature_index)
+
     pm.save_model_weights(MODEL_FILE, constants.feature_names)
 
 
