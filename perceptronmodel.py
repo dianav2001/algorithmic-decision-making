@@ -28,7 +28,7 @@ class PerceptronModel:
     # Constants
 
     # Number of epochs to train the model
-    EPOCHS = 2500
+    EPOCHS = 2000
 
     # Initial learning rate
     INITIAL_LEARNING_RATE = 10
