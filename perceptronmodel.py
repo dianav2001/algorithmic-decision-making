@@ -122,6 +122,11 @@ class PerceptronModel:
                 if (features_to_use is None) or (j in features_to_use):
                     self.weights[j] += (learning_rate * difference[j])/data.get_size()
 
+            # Adjust the impact of protected characteristics on the model
+            for j in range(len(self.weights)):
+                if (j >= 35):
+                    self.weights[j] *= 0.30
+
             # After every EPOCHS_PER_REDUCTION epochs, lower the learning rate by multiplying it
             # by the LEARNING_RATE_REDUCTION.  Gradually lower the learning rate in this way helps
             # to stabilize the weights over time by reducing the amount of change.  We also print
